@@ -561,11 +561,7 @@
     /* ── Video slide (Supremo) ── */
     #video { padding: 20px 0; }
     .looloo-title { font-size: clamp(16px, 5vw, 24px); padding: 0 20px; }
-    .video-wrap { width: 92vw !important; max-width: none !important; }
-    .play-btn { width: 60px; height: 60px; margin-bottom: 12px; }
-    .play-btn span { font-size: 24px; }
-    .video-title { font-size: 16px; }
-    .video-sub { font-size: 9px; letter-spacing: 2px; }
+    #video video { width: 92vw !important; }
 
     /* ── Store slide (CDMX) ── */
     #store .store-content { flex-direction: column !important; padding: 12px 20px 0; gap: 16px; }
@@ -588,7 +584,7 @@
     /* ── Loo Loo slide ── */
     .looloo-content { flex-direction: column; padding: 0 16px; max-height: none; gap: 12px; }
     .looloo-photo-wrap { width: 100%; }
-    .looloo-content .video-wrap { height: auto; aspect-ratio: 9/16; width: 60vw !important; max-height: 40vh; align-self: center; }
+    .looloo-reel { height: 40vh !important; align-self: center; }
 
     /* ── Venue costs + Timing ── */
     #venues .venue-grid,
@@ -679,16 +675,9 @@
 <section id="video">
   <div style="flex:1; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:16px;">
     <div class="looloo-title">Supremo + Season Release with FourLoko</div>
-    <div class="video-wrap" onclick="toggleVideo(this)" style="width:80vw; max-width:none;">
-      <video preload="metadata">
-        <source src="bestcliponearth.mp4" type="video/mp4">
-      </video>
-      <div class="video-overlay">
-        <div class="play-btn"><span>▶</span></div>
-        <div class="video-title">Best Clip on Earth</div>
-        <div class="video-sub">Click to play · CDMX 2026</div>
-      </div>
-    </div>
+    <video controls preload="metadata" poster="poster-supremo.jpg" style="width:80vw; border-radius:8px; box-shadow: 0 20px 60px rgba(0,0,0,0.5);">
+      <source src="bestcliponearth.mp4" type="video/mp4">
+    </video>
   </div>
   <div class="slide-footer">
     <span>April 2026 · ripndip.com</span>
@@ -722,15 +711,9 @@
       <div class="looloo-photo-wrap">
         <img src="DSC07110.jpg" alt="RIPNDIP + Puma Club Loo Loo" class="looloo-photo">
       </div>
-      <div class="video-wrap" onclick="toggleVideo(this)" style="box-shadow: 0 10px 40px rgba(0,0,0,0.4); border-radius:8px;">
-        <video>
-          <source src="looloo - ripndip and puma.mp4" type="video/mp4">
-        </video>
-        <div class="video-overlay">
-          <div class="play-btn"><span>▶</span></div>
-          <div class="video-sub">Click to play</div>
-        </div>
-      </div>
+      <video controls preload="metadata" poster="poster-looloo.jpg" class="looloo-reel" style="height:60vh; aspect-ratio:9/16; border-radius:8px; box-shadow: 0 10px 40px rgba(0,0,0,0.4);">
+        <source src="looloo - ripndip and puma.mp4" type="video/mp4">
+      </video>
     </div>
   </div>
   <div class="slide-footer">
