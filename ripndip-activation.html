@@ -390,9 +390,18 @@
   /* ════════════════════════════
      SLIDE 4: VENUE COSTS
      ════════════════════════════ */
-  #venues .venue-grid {
+  #venues .venue-grid,
+  #timing .venue-grid {
     padding: 24px 60px 0;
     flex: 1;
+  }
+  #timing .venue-row {
+    border-left-color: #6C63FF;
+  }
+  #timing .venue-cost {
+    color: #6C63FF;
+    font-size: clamp(12px, 1.4vw, 15px);
+    font-family: 'Prompt', sans-serif;
   }
   .venue-row {
     display: grid;
