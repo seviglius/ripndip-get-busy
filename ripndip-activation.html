@@ -542,19 +542,66 @@
 
   /* ── Responsive ── */
   @media (max-width: 768px) {
-    .slide-header { padding: 32px 28px 0; }
-    .slide-footer { padding: 14px 28px; }
-    .prepared { top: 32px; right: 28px; }
-    .prepared .name { font-size: 15px; }
-    .venue-grid, #store .store-content { padding: 20px 28px 0; }
-    .party-grid { flex-direction: column; gap: 10px; padding: 0 16px; max-height: none; }
-    .party-grid img { max-height: 35vh; max-width: 100%; }
-    .store-content { flex-direction: column !important; }
+    /* ── Global mobile ── */
+    html { scroll-snap-type: none; }
+    section { min-height: auto; scroll-snap-align: none; padding-bottom: 20px; }
+    .slide-header { padding: 24px 20px 0; }
+    .slide-header h2 { font-size: clamp(24px, 7vw, 36px); }
+    .slide-footer { padding: 12px 20px; }
+    .nav-dots { display: none; }
+    .prepared { position: relative; top: auto; right: auto; text-align: left; padding: 8px 20px 0; }
+    .prepared .name { font-size: 14px; }
+    .prepared .label { font-size: 8px; }
+
+    /* ── Title slide ── */
+    #title h1 { font-size: clamp(28px, 8vw, 42px); padding: 0 20px; }
+    #title .tagline { font-size: 11px; letter-spacing: 3px; padding: 0 20px; }
+    #title .scroll-hint { bottom: 60px; }
+
+    /* ── Video slide (Supremo) ── */
+    #video { padding: 20px 0; }
+    .looloo-title { font-size: clamp(16px, 5vw, 24px); padding: 0 20px; }
+    .video-wrap { width: 92vw !important; max-width: none !important; }
+    .play-btn { width: 60px; height: 60px; margin-bottom: 12px; }
+    .play-btn span { font-size: 24px; }
+    .video-title { font-size: 16px; }
+    .video-sub { font-size: 9px; letter-spacing: 2px; }
+
+    /* ── Store slide (CDMX) ── */
+    #store .store-content { flex-direction: column !important; padding: 12px 20px 0; gap: 16px; }
     .store-photos { flex-direction: column; }
-    .store-photos img { max-height: 35vh; }
-    .looloo-content { flex-direction: column; padding: 0 16px; max-height: none; }
-    .looloo-content .video-wrap { height: 50vh; }
-    .looloo-content .video-wrap { aspect-ratio: 16/9; }
+    .store-photos img { max-height: 30vh; width: 100%; }
+    .store-info { padding-left: 0; flex: none; }
+    .store-info .store-name { font-size: 22px; }
+    .store-info .info-label { margin-top: 12px; }
+    .store-info .info-value { font-size: 13px; }
+
+    /* ── Sunday Sunday (party) ── */
+    #party > div:first-child { gap: 10px; }
+    .party-grid { flex-direction: row; flex-wrap: nowrap; gap: 6px; padding: 0 16px; max-height: 30vh; }
+    .party-grid a { flex: 1; min-width: 0; }
+    .party-grid img { max-height: 30vh; width: 100%; height: 100%; max-width: none; object-fit: cover; }
+    .yt-thumb { width: 92%; max-width: none; }
+    .yt-play { width: 48px; height: 48px; }
+    .yt-play span { font-size: 18px; }
+
+    /* ── Loo Loo slide ── */
+    .looloo-content { flex-direction: column; padding: 0 16px; max-height: none; gap: 12px; }
+    .looloo-photo-wrap { width: 100%; }
+    .looloo-content .video-wrap { height: auto; aspect-ratio: 9/16; width: 60vw !important; max-height: 40vh; align-self: center; }
+
+    /* ── Venue costs + Timing ── */
+    #venues .venue-grid,
+    #timing .venue-grid { padding: 12px 16px 0; }
+    .venue-header { display: none; }
+    .venue-row {
+      grid-template-columns: 1fr !important;
+      gap: 6px;
+      padding: 14px 16px;
+    }
+    .venue-cap { text-align: left; font-size: 16px; }
+    .venue-cost { text-align: left; font-size: 18px; }
+    .venue-name { font-size: 16px; }
   }
 </style>
 </head>
